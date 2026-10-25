@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrantFlow · GitHub-verified milestone grants on GenLayer</title>
+    <meta name="description" content="Open board of milestone grants for public GitHub repositories. Funders lock GEN; GenLayer validators read the GitHub API and pay the builder when a milestone's criteria are met." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="./favicon.svg" alt="" width="30" height="30" />
+        <div>
+          <strong>GrantFlow</strong>
+          <span class="muted">GitHub-verified milestone grants · GenLayer Studionet</span>
+        </div>
+      </div>
+      <div id="account" class="account"></div>
+    </header>
+
+    <div class="notice">
+      Prototype on <b>GenLayer Studionet</b>. Balances are Studio test GEN with no real value.
+    </div>
+
+    <nav class="tabs" id="tabs">
+      <button data-tab="grants" class="active">Grants</button>
+      <button data-tab="funder">Funder</button>
+      <button data-tab="builder">Builder</button>
+      <button data-tab="settings">Settings</button>
+    </nav>
+
+    <main>
+      <section id="tab-grants" class="tab active"><p class="muted">Loading contract state…</p></section>
+      <section id="tab-funder" class="tab"></section>
+      <section id="tab-builder" class="tab"></section>
+      <section id="tab-settings" class="tab"></section>
+    </main>
+
+    <aside id="txlog" class="txlog"></aside>
+
+    <footer class="footer muted">
+      Contract <code id="footer-addr"></code> · data: GitHub REST API (public, unauthenticated) ·
+      <a href="https://github.com/syariffadilla/genlayer-grantflow" target="_blank" rel="noopener">source on GitHub</a>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
